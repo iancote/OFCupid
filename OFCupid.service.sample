@@ -1,0 +1,12 @@
+[Unit]
+Description=Runs the OFCupid process
+Documentation=https://github.com/wandsdn/OFCupid
+
+[Service]
+Type=simple
+WorkingDirectory=/root/OFCupid
+ExecStart=/root/OFCupid/env/bin/ryu-manager --app-list ofcupid.py --wsapi-port 80
+
+[Install]
+WantedBy=multi-user.target
+
